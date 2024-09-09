@@ -1,6 +1,6 @@
 # Look, Compare, Decide: Alleviating Hallucination in Large Vision-Language Models via Multi-View Multi-Path Reasoning
 
-This repository is the official implementation of "Look, Compare, Decide: Alleviating Hallucination in Large Vision-Language Models via Multi-View Multi-Path Reasoning". 
+This repository is the official implementation of paper [Look, Compare, Decide: Alleviating Hallucination in Large Vision-Language Models via Multi-View Multi-Path Reasoning](https://arxiv.org/pdf/2408.17150). 
 
 ## Pipeline of MVP
 
@@ -54,9 +54,9 @@ for file in "${files[@]}"; do
   for perspective in "${perspectives[@]}"; do
     for dataset in "${question_files[@]}"; do
       for type in "${question_types[@]}"; do
-        question_file="MVP/benchmark/POPE/${dataset}/${dataset}_pope_${type}.json"
-        output_file="MVP/output/$(basename "$file" .py)_${perspective}_${dataset}_${type}_pope.jsonl"
-        log_file="MVP/logs/$(basename "$file" .py)_${perspective}_${dataset}_${type}_pope.log"
+        question_file="MVP/benchmark/POPE/dataset/{dataset}/{dataset}_pope_${type}.json"
+        output_file="MVP/output/(basename "(basename "file" .py)_{perspective}_{perspective}_{dataset}_${type}_pope.jsonl"
+        log_file="MVP/logs/(basename "(basename "file" .py)_{perspective}_{perspective}_{dataset}_${type}_pope.log"
 
         nohup srun -p -n1 -N1 --gres=gpu:1 --quotatype=reserved python "MVP/$file" \
           --model-path liuhaotian/llava-v1.5-7b \
@@ -118,5 +118,21 @@ MVP's performance on MME:
 ## Case Study
 
 ![image](https://github.com/GasolSun36/MVP/blob/main/assets/case_study.png)
+
+
+## How to cite
+If you interested or inspired by this work, you can cite us by:
+```sh
+@misc{qu2024lookcomparedecidealleviating,
+      title={Look, Compare, Decide: Alleviating Hallucination in Large Vision-Language Models via Multi-View Multi-Path Reasoning}, 
+      author={Xiaoye Qu and Jiashuo Sun and Wei Wei and Yu Cheng},
+      year={2024},
+      eprint={2408.17150},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2408.17150}, 
+}
+```
+
 
 
