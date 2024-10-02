@@ -1,0 +1,6 @@
+model/llava/model/multimodal_projector/__pycache__/
+model/llava/model/language_model/__pycache__/
+model/llava/model/multimodal_encoder/__pycache__/
+model/llava/model/__pycache__/
+model/__pycache__/
+model/llava/__pycache__/
