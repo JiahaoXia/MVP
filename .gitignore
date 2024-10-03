@@ -4,3 +4,7 @@ model/llava/model/multimodal_encoder/__pycache__/
 model/llava/model/__pycache__/
 model/__pycache__/
 model/llava/__pycache__/
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
